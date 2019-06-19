@@ -8,7 +8,7 @@
     "build": "./node_modules/.bin/babel src --out-dir dist",
     "babel-node": "babel-node src/app.js",
     "dev": "nodemon --exec npm run babel-node",
-    "sequelize": "sequelize --options-path=src/database/options.js"
+    "sequelize": "npx sequelize-cli --options-path=src/database/options.js"
   },
   "keywords": [],
   "author": "",
