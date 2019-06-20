@@ -12,7 +12,11 @@ module.exports = (sequelize, DataTypes) => {
     hiredAt: DataTypes.DATEONLY,
     deleted: DataTypes.BOOLEAN,
     active: DataTypes.BOOLEAN,
-  }, {});
+  }, {
+    defaultScope: {
+      attributes: { exclude: ['password'] },
+    }
+  });
   User.associate = function(models) {
     // associations can be defined here
   };

@@ -18,12 +18,10 @@ if (config.use_env_variable) {
 fs
   .readdirSync(__dirname)
   .filter(file => {
-    // console.log('index.js', __dirname);
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(file => {
     const model = sequelize['import'](path.join(__dirname, file));
-    console.log(model);
     db[model.name] = model;
   });
 

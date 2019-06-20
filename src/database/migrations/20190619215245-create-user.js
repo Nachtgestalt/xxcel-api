@@ -63,10 +63,12 @@ module.exports = {
         type: Sequelize.DATEONLY
       },
       deleted: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
       },
       active: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       createdAt: {
         allowNull: false,
